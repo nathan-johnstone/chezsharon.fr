@@ -7,8 +7,6 @@ class View
     //ATTRIBUTS
     private ViewHeader $viewHeader;
     private ViewFooter $viewFooter;
-    private array $futureEvents = [];
-    private array $userData = [];
 
     //CONSTRUCTEUR
     public function __construct(string $titre, string $css = "", string $js = "", string $links = "")
@@ -18,7 +16,6 @@ class View
     }
 
     //GETTER ET SETTER
-
     public function getHeader(): ViewHeader
     {
         return $this->viewHeader;
