@@ -1,0 +1,77 @@
+/* REBOOT CSS */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* COLORS */
+
+:root {
+    --pink: #F2475E;
+    --green: #71BF71;
+    --blue: #71BFA7;
+    --white: #FFF9F9;
+    --black: #1F0E0D;
+}
+
+@media screen and (prefers-color-scheme: light) {
+    body {
+        background-color: var(--white);
+        color: var(--black);
+    }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--black);
+        color: var(--white);
+    }
+}
+
+/* FONTS */
+
+@font-face {
+    font-family: "Cougette";
+    src: url(../font/Courgette.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Halant";
+    src: url(../font/Halant.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Heebo";
+    src: url(../font/Heebo.ttf) format("truetype");
+}
+
+body {
+    font-family: "Heebo", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+h1 {
+    font-family: "Cougette", serif;
+    margin: 10px 0;
+    color: var(--pink);
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Halant", serif;
+    margin: 10px 0;
+}
+
+p {
+    margin: 10px 0;
+}
+
+.justify {
+    text-align: justify;
+}
