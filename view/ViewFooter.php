@@ -18,10 +18,10 @@ class ViewFooter
         <footer>
 
             <menu area-label="secondaire">
-                <li area-label="Mentions légales"><a href="#">Mentions légales</a></li>
-                <li area-label="Politique de confidentialité"><a href="#">Politique de confidentialité</a></li>
-                <li area-label="Conditions d'utilisation"><a href="#">Conditions d'utilisation</a></li>
-                <li area-label="Politique d'accèssibilité"><a href="#">Politique d'accèssibilité</a></li>
+                <li area-label="Mentions légales"><a href="<?= $_ENV['mentionsLegales'] ?>">Mentions légales</a></li>
+                <li area-label="Politique de confidentialité"><a href="<?= $_ENV['confidentialite'] ?>">Politique de confidentialité</a></li>
+                <li area-label="Conditions d'utilisation"><a href="<?= $_ENV['utilisation'] ?>">Conditions d'utilisation</a></li>
+                <li area-label="Politique d'accèssibilité"><a href="<?= $_ENV['accessibilite'] ?>">Déclaration d'accessibilité</a></li>
             </menu>
 
             <hr/>
