@@ -51,6 +51,10 @@ class ViewHeader
         <body>
             <header>
 
+                <hr/>
+header
+                <hr/>
+
             </header>
     <?php
         ob_end_flush();

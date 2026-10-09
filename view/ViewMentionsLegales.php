@@ -20,9 +20,76 @@ class ViewMentionsLegales extends View
 
             <h1>Mentions légales</h1>
 
-            <h2>Second title</h2>
+            <section class="justify">
 
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae porro nobis tempore accusamus labore blanditiis. Delectus, cupiditate eligendi. Eius tempora consequuntur eveniet numquam eum consequatur facilis quis incidunt, quibusdam porro quia amet odio adipisci id officia provident eligendi reprehenderit enim fuga deserunt blanditiis corrupti autem iste sequi! Qui laborum dolor esse ipsa dignissimos perferendis est consequuntur rem impedit, dolorem laboriosam similique provident nisi eaque corporis ex! Ea adipisci error veritatis possimus odit alias iure consequuntur, non aliquam reiciendis ullam quas pariatur culpa repellat voluptatem quia voluptatum, eligendi amet? Error numquam inventore rerum impedit obcaecati. Sed nostrum eos saepe iure placeat.</p>
+                <h2>Identité de l’entreprise</h2>
+
+                <h3>Dénomination sociale</h3>
+
+                <p>TABAC PRESSE SENTIER CATHARE</p>
+
+                <h3>Forme juridique</h3>
+
+                <p>Entreprise Individuelle</p>
+
+                <h3>Adresse du siège social</h3>
+
+                <p>12 Grand Rue<br/>
+                11340 Espezel<br/>
+                France</p>
+
+                <h3>Montant du capital social</h3>
+
+                <p>Montant</p>
+
+                <h3>Numéro Siren</h3>
+
+                <p>Siren</p>
+
+                <h3>Contact</h3>
+
+                <p>+33 (0) 4 68 69 03 04<br/>
+                tabacsentiercathare[at]orange.fr</p>
+
+                <h3>Numéro d’identification à la TVA</h3>
+
+                <p>numéro</p>
+
+                <h2>Identité de l’éditeur</h2>
+
+                <h3>Dénomination sociale</h3>
+
+                <p>BricaRòsa – Web Design<br />
+                    Nathan JOHNSTONE</p>
+
+                <h3>Adresse</h3>
+
+                <p>3 rue de Fonsorbes<br />
+                    31700 Blagnac<br />
+                    France</p>
+
+                <h3>Contact</h3>
+
+                <p>nathan[at]bricarosa.fr</p>
+
+                <h2>Identité de l’hébergeur</h2>
+
+                <h3>Dénomination sociale</h3>
+
+                <p>HOSTINGER operations, UAB</p>
+
+                <h3>Adresse</h3>
+
+                <p>Švitrigailos str. 34,<br />
+                    Vilnius 03230<br />
+                    Lithuania</p>
+
+                <h3>Contact</h3>
+
+                <p>+37 064 503 378<br />
+                    domains[at]hostinger.com</p>
+
+            </section>
 
         </main>
 

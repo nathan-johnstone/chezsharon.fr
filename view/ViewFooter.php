@@ -17,6 +17,8 @@ class ViewFooter
 ?>
         <footer>
 
+            <hr/>
+
             <menu area-label="secondaire">
                 <li area-label="Mentions légales"><a href="<?= $_ENV['mentionsLegales'] ?>">Mentions légales</a></li>
                 <li area-label="Politique de confidentialité"><a href="<?= $_ENV['confidentialite'] ?>">Politique de confidentialité</a></li>
