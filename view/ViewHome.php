@@ -2,7 +2,7 @@
 
 namespace View;
 
-class ViewAccueil extends View
+class ViewHome extends View
 {
     //ATTRIBUTS
 

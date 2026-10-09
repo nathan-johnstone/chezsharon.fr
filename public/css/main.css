@@ -75,3 +75,31 @@ p {
 .justify {
     text-align: justify;
 }
+
+/* RESPONSIVE */
+
+header,
+main,
+footer {
+    margin: auto;
+}
+
+@media screen and (min-width: 900px) {
+    header,
+    main,
+    footer {
+        width: 900px;
+    }
+}
+
+/* FOOTER */
+
+footer {
+    menu {
+        list-style: none;
+        padding: 0;
+    }
+    p {
+        text-align: center;
+    }
+}
