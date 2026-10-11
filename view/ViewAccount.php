@@ -2,7 +2,7 @@
 
 namespace View;
 
-class ViewUser extends View
+class ViewAccount extends View
 {
     //ATTRIBUTS
 
@@ -16,7 +16,7 @@ class ViewUser extends View
         ob_start();
 ?>
         <main>
-            <h1>User</h1>
+            <h1>Compte</h1>
         </main>
 <?php
         ob_end_flush();

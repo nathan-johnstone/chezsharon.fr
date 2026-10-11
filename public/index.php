@@ -18,8 +18,10 @@ $_ENV['accessibilite'] = "/accessibilite";
 $_ENV['shop'] = "/shop";
 
 /* User */
-$_ENV['user'] = "/user";
-$_ENV['logout'] = $_ENV['user'] . "/logout";
+$_ENV['account'] = "/compte";
+$_ENV['signin'] = "/connexion";
+$_ENV['signup'] = "/inscription";
+$_ENV['logout'] = "/deconnexion";
 
 //AUTOLOADER
 spl_autoload_register(function (string $class) {
@@ -68,14 +70,34 @@ switch ($path) {
         break;
 
 /* User */
-    case $_ENV['user']:
-        $controller = new Controller\Controller(new Model\Model, new View\ViewUser("Compte"));
+    case $_ENV['signin']:
+        if (isset($_SESSION['id_user'])) {
+            header('location:' . $_ENV['account']);
+            exit;
+        }
+        $controller = new Controller\Controller(new Model\Model, new View\ViewSignin("Connexion"));
+        $controller->render();
+        break;
+    case $_ENV['signup']:
+        if (isset($_SESSION['id_user'])) {
+            header('location:' . $_ENV['account']);
+            exit;
+        }
+        $controller = new Controller\Controller(new Model\Model, new View\ViewSignup("Inscription"));
         $controller->render();
         break;
     case $_ENV['logout']:
         session_destroy();
         header('location:' . $_ENV['home']);
         exit;
+    case $_ENV['account']:
+        if (!isset($_SESSION['id_user'])) {
+            header('location:' . $_ENV['signin']);
+            exit;
+        }
+        $controller = new Controller\Controller(new Model\Model, new View\ViewAccount("Compte"));
+        $controller->render();
+        break;
 
 /* 404 */
     default:

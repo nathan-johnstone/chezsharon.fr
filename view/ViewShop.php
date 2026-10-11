@@ -17,6 +17,8 @@ class ViewShop extends View
 ?>
         <main>
             <h1>Boutique</h1>
+
+            <h2><?= $_GET["c"] ?></h2>
         </main>
 <?php
         ob_end_flush();

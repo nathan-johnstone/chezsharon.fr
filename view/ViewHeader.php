@@ -55,7 +55,7 @@ class ViewHeader
                     <img src="/img/logo-transparant.svg" alt="Logo Chez Sharon" height="100">
                 </a>
 
-                <a href="<?= $_ENV['user'] ?> ">user</a>
+                <a href="<?= $_ENV['account'] ?> ">user</a>
 
                 <a href="<?= $_ENV['logout'] ?>">logout</a>
 
