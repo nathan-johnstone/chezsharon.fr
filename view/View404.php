@@ -17,7 +17,7 @@ class View404 extends View
 ?>
         <main>
             <h1>Erreur 404 : page non trouveé</h1>
-            <a href="<?= $_ENV['accueil'] ?>">Retourner à l'accueil</a>
+            <a href="<?= $_ENV['home'] ?>">Retourner à l'accueil</a>
         </main>
 <?php
         ob_end_flush();

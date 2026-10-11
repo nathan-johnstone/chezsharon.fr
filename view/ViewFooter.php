@@ -28,7 +28,7 @@ class ViewFooter
 
             <hr/>
 
-            <p>© 2026 Chez Sharon - Made with ♡ by <a href="https://bricarosa.fr" target="_blank">Nathan</a></p>
+            <p>© 2026 Chez Sharon - Made with <b>♡</b> by <a href="https://bricarosa.fr" target="_blank">Nathan</a></p>
 
         </footer>
         </body>

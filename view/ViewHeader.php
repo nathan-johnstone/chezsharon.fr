@@ -51,11 +51,21 @@ class ViewHeader
         <body>
             <header>
 
-                <a href="/">
+                <a href="<?= $_ENV['home'] ?>">
                     <img src="/img/logo-transparant.svg" alt="Logo Chez Sharon" height="100">
                 </a>
 
+                <a href="<?= $_ENV['user'] ?> ">user</a>
+
+                <a href="<?= $_ENV['logout'] ?>">logout</a>
+
                 <hr/>
+
+                <a href="<?= $_ENV['shop'] . "?c=new" ?> ">Nouveautés</a>
+
+                <a href="<?= $_ENV['shop'] . "?c=clothes" ?>">Vêtements</a>
+
+                <a href="<?= $_ENV['shop'] . "?c=gifts" ?>">Cadeaux</a>
 
             </header>
     <?php

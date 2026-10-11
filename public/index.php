@@ -14,8 +14,12 @@ $_ENV['confidentialite'] = "/confidentialite";
 $_ENV['utilisation'] = "/conditions-utilisation";
 $_ENV['accessibilite'] = "/accessibilite";
 
+/* Shop */
+$_ENV['shop'] = "/shop";
+
 /* User */
-$_ENV['logout'] = "/logout";
+$_ENV['user'] = "/user";
+$_ENV['logout'] = $_ENV['user'] . "/logout";
 
 //AUTOLOADER
 spl_autoload_register(function (string $class) {
