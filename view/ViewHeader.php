@@ -51,8 +51,10 @@ class ViewHeader
         <body>
             <header>
 
-                <hr/>
-header
+                <a href="/">
+                    <img src="/img/logo-transparant.svg" alt="Logo Chez Sharon" height="100">
+                </a>
+
                 <hr/>
 
             </header>
