@@ -60,11 +60,23 @@ switch ($path) {
         $controller = new Controller\Controller(new Model\Model, new View\ViewAccessibilite("Déclaration d'accessibilité"));
         $controller->render();
         break;
+
+/* Shop */
+    case $_ENV['shop']:
+        $controller = new Controller\Controller(new Model\Model, new View\ViewShop("Boutique"));
+        $controller->render();
+        break;
+
 /* User */
+    case $_ENV['user']:
+        $controller = new Controller\Controller(new Model\Model, new View\ViewUser("Compte"));
+        $controller->render();
+        break;
     case $_ENV['logout']:
         session_destroy();
         header('location:' . $_ENV['home']);
         exit;
+
 /* 404 */
     default:
         $controller = new Controller\Controller(new Model\Model, new View\View404("Erreur 404"));
