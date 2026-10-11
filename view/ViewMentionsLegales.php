@@ -44,7 +44,7 @@ class ViewMentionsLegales extends View
 
                 <h3>Numéro Siren</h3>
 
-                <p>Siren</p>
+                <p>803 417 674 00014</p>
 
                 <h3>Contact</h3>
 
@@ -53,7 +53,7 @@ class ViewMentionsLegales extends View
 
                 <h3>Numéro d’identification à la TVA</h3>
 
-                <p>numéro</p>
+                <p>FR41 803 417 674</p>
 
                 <h2>Identité de l’éditeur</h2>
 
