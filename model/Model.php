@@ -11,10 +11,10 @@ class Model
     private PDO $bdd;
 
     //CONSTRUCTEUR
-    // public function __construct()
-    // {
-    //     $this->bdd = Tools::connect();
-    // }
+    public function __construct()
+    {
+        $this->bdd = Tools::connect();
+    }
 
     //GETTER ET SETTER
     public function getBdd()
