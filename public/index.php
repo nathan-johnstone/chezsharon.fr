@@ -75,7 +75,8 @@ switch ($path) {
             header('location:' . $_ENV['account']);
             exit;
         }
-        $controller = new Controller\Controller(new Model\Model, new View\ViewSignin("Connexion"));
+        $controller = new Controller\ControllerUser(new Model\ModelUser, new View\ViewSignin("Connexion"));
+        $controller->signin();
         $controller->render();
         break;
     case $_ENV['signup']:
@@ -83,7 +84,8 @@ switch ($path) {
             header('location:' . $_ENV['account']);
             exit;
         }
-        $controller = new Controller\Controller(new Model\Model, new View\ViewSignup("Inscription"));
+        $controller = new Controller\ControllerUser(new Model\ModelUser, new View\ViewSignup("Inscription"));
+        $controller->signup();
         $controller->render();
         break;
     case $_ENV['logout']:

@@ -5,10 +5,16 @@ namespace View;
 class ViewSignin extends View
 {
     //ATTRIBUTS
+    private string $message = '';
 
     //CONSTRUCTEUR
 
     //GETTER ET SETTER
+    public function setMessage(string $newMessage): self
+    {
+        $this->message = $newMessage;
+        return $this;
+    }
 
     //METHODS
     public function display(): void
@@ -28,6 +34,8 @@ class ViewSignin extends View
                 <input type="submit" name="signin" value="Se connecter">
             </form>
             <p>Pas encore de compte ? <a href="<?= $_ENV["signup"] ?>">Créer un compte</a></p>
+
+            <p><?= $this->message ?></p>
         </main>
 <?php
         ob_end_flush();
