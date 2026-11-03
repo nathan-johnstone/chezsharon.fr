@@ -21,6 +21,11 @@
         background-color: var(--white);
         color: var(--black);
     }
+
+    svg{
+        fill: var(--black);
+    }
+
     .dark-mode {
         display: none;
     }
@@ -31,9 +36,18 @@
         background-color: var(--black);
         color: var(--white);
     }
+
+    svg{
+        fill: var(--white);
+    }
+
     .light-mode {
         display: none;
     }
+}
+
+a, svg {
+    transition: all 0.2s ease;
 }
 
 /* FONTS */
@@ -66,7 +80,7 @@ h1 {
     text-align: center;
 }
 
-h2{
+h2 {
     font-family: "Halant", serif;
     margin: 10px 0;
     color: var(--pink);
@@ -84,7 +98,7 @@ p {
     margin: 10px 0;
 }
 
-a{
+a {
     color: var(--pink);
     font-weight: 500;
     text-decoration: none;
@@ -104,6 +118,7 @@ footer {
 }
 
 @media screen and (min-width: 900px) {
+
     header,
     nav[aria-label="breadcrumb"],
     main,
@@ -139,28 +154,79 @@ input[type="submit"] {
 
 /* HEADER */
 
-header{
-    text-align: center;
+header {
+    padding: 10px 0;
+
+    nav {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+
+        div {
+            flex: 1;
+            text-align: right;
+            padding-right: 10px;
+
+            a {
+                display: inline-block;
+                padding: 5px;
+
+                svg {
+                    width: 24px;
+                    height: 24px;
+                    vertical-align: sub;
+                    &:hover {
+                        fill: var(--pink);
+                    }
+                }
+            }
+        }
+    }
+
+    menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+
+        li {
+            margin: 5px;
+            a {
+                padding: 5px 10px;
+                text-transform: uppercase;
+                font-weight: bold;
+                &:hover {
+                    background-color: var(--pink);
+                    color: inherit;
+                }
+            }
+        }
+    }
 }
 
 /* BREADCRUMB */
 
-nav[aria-label="breadcrumb"] ul{
+nav[aria-label="breadcrumb"] ul {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     list-style: none;
     margin: 0;
     padding: 0;
-    li{
-        a{
+
+    li {
+        a {
             text-decoration: none;
-            transition: all 0.2s ease;
         }
-        &[aria-current="page"] a{
-                color: inherit;
-            }
-        &:not(:last-child):after{
+
+        &[aria-current="page"] a {
+            color: inherit;
+        }
+
+        &:not(:last-child):after {
             content: '>';
             margin: 0 5px;
         }
@@ -174,6 +240,7 @@ footer {
         list-style: none;
         padding: 0;
     }
+
     p {
         text-align: center;
     }
