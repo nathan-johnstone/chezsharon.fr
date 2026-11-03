@@ -6,15 +6,17 @@ class View
 {
     //ATTRIBUTS
     private ViewHeader $viewHeader;
+    private ViewBreadcrumb $viewBreadcrumb;
     private ViewFooter $viewFooter;
-    private string $titre = "";
+    private string $title;
 
     //CONSTRUCTEUR
-    public function __construct(string $titre, string $css = "", string $js = "", string $links = "")
+    public function __construct(string $title, string $css = "", string $js = "", string $links = "")
     {
-        $this->viewHeader = new ViewHeader($titre, $css, $js, $links);
+        $this->viewHeader = new ViewHeader($title, $css, $js, $links);
+        $this->viewBreadcrumb = new ViewBreadcrumb($title);
         $this->viewFooter = new ViewFooter();
-        $this->titre = $titre;
+        $this->title = $title;
     }
 
     //GETTER ET SETTER
@@ -23,14 +25,14 @@ class View
         return $this->viewHeader;
     }
 
+    public function getBreadcrumb(): ViewBreadcrumb
+    {
+        return $this->viewBreadcrumb;
+    }
+
     public function getFooter(): ViewFooter
     {
         return $this->viewFooter;
-    }
-
-    public function getTitre(): string
-    {
-        return $this->titre;
     }
 
     //METHODS
@@ -48,6 +50,9 @@ class View
     public function displayAll(): void
     {
         $this->viewHeader->display();
+        if($this->title !== "Accueil") {
+            $this->viewBreadcrumb->display();
+        }
         $this->display();
         $this->viewFooter->display();
     }

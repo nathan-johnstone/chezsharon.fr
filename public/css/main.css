@@ -97,6 +97,7 @@ a{
 /* RESPONSIVE */
 
 header,
+nav[aria-label="breadcrumb"],
 main,
 footer {
     margin: auto;
@@ -104,6 +105,7 @@ footer {
 
 @media screen and (min-width: 900px) {
     header,
+    nav[aria-label="breadcrumb"],
     main,
     footer {
         width: 900px;
