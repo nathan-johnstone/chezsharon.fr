@@ -18,7 +18,7 @@ class ViewHome extends View
 
         <main>
 
-            <h1>Acceuil</h1>
+            <h1>Accueil</h1>
 
             <h2>Second title</h2>
 

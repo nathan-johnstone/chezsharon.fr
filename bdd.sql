@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS `user`(
 	CONSTRAINT fk_user_role FOREIGN KEY (id_role) REFERENCES `role`(id_role)
 )ENGINE=innoDB;
 
-INSERT INTO `user`(first_name, last_name, email, `password`, id_role) VALUES ('Nathan', 'Johnstone', 'nathan@bricarosa.fr', '$2y$10$cSbX3nSYSH74Dj.UsYME7uogNu/4c1WxcYM5vNfpSmOoOCO1qk5C6', 1); -- password = 1
+INSERT INTO `user`(first_name, last_name, email, `password`, id_role) VALUES ('Nathan', 'Johnstone', 'nathan@bricarosa.fr', '$2y$10$cSbX3nSYSH74Dj.UsYME7uogNu/4c1WxcYM5vNfpSmOoOCO1qk5C6', 1);
 
 CREATE TABLE IF NOT EXISTS category(
 	id_category INT PRIMARY KEY AUTO_INCREMENT,
