@@ -98,7 +98,18 @@ class ControllerUser extends Controller
 
             $this->getModel()->addUser();
 
-            $this->getView()->setMessage("Vous avez bien été enregistré.");
+            $data = $this->getModel()->findByEmail();
+
+            $_SESSION['id_user'] = $data['id_user'];
+            $_SESSION['first_name'] = $data['first_name'];
+            $_SESSION['last_name'] = $data['last_name'];
+            $_SESSION['address'] = $data['address'];
+            $_SESSION['post_code'] = $data['post_code'];
+            $_SESSION['city'] = $data['city'];
+            $_SESSION['email'] = $data['email'];
+            $_SESSION['role'] = $data['role'];
+            $_SESSION['createdAt'] = $data['created_at'];
+
         }
     }
 

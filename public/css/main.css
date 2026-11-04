@@ -74,18 +74,15 @@ body {
 }
 
 h1 {
-    font-family: "Cougette", serif;
-    margin: 10px 0;
-    color: var(--pink);
     text-align: center;
 }
 
 h2 {
-    font-family: "Halant", serif;
-    margin: 10px 0;
     color: var(--pink);
 }
 
+h1,
+h2,
 h3,
 h4,
 h5,
@@ -102,6 +99,18 @@ a {
     color: var(--pink);
     font-weight: 500;
     text-decoration: none;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: var(--pink) 1px solid;
+    padding: 10px;
+    text-align: left;
 }
 
 .justify {

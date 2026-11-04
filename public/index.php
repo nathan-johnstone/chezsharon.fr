@@ -23,6 +23,10 @@ $_ENV['signin'] = "/connexion";
 $_ENV['signup'] = "/inscription";
 $_ENV['logout'] = "/deconnexion";
 
+/* Admin */
+
+$_ENV['admin'] = "/admin";
+
 //AUTOLOADER
 spl_autoload_register(function (string $class) {
     if (str_starts_with($class, 'Controller')) {
@@ -97,7 +101,16 @@ switch ($path) {
             header('location:' . $_ENV['signin']);
             exit;
         }
-        $controller = new Controller\Controller(new Model\Model, new View\ViewAccount("Compte"));
+        $controller = new Controller\Controller(new Model\Model, new View\ViewAccount("Espace personnel"));
+        $controller->render();
+        break;
+/* Admin */
+    case $_ENV['admin']:
+        if (!isset($_SESSION['role']) && $_SESSION['role'] != "Admin") {
+            header('location:' . $_ENV['signin']);
+            exit;
+        }
+        $controller = new Controller\Controller(new Model\Model, new View\ViewAdmin("Espace admin"));
         $controller->render();
         break;
 
