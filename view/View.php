@@ -11,9 +11,9 @@ class View
     private string $title;
 
     //CONSTRUCTEUR
-    public function __construct(string $title, string $css = "", string $js = "", string $links = "")
+    public function __construct(string $title, string $links = "")
     {
-        $this->viewHeader = new ViewHeader($title, $css, $js, $links);
+        $this->viewHeader = new ViewHeader($title, $links);
         $this->viewBreadcrumb = new ViewBreadcrumb($title);
         $this->viewFooter = new ViewFooter();
         $this->title = $title;

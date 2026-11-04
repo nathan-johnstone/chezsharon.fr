@@ -45,9 +45,11 @@ spl_autoload_register(function (string $class) {
 $url = parse_url($_SERVER['REQUEST_URI']);
 $path = isset($url['path']) ? $url['path'] : '/';
 switch ($path) {
-/* Home */
+    /* Home */
     case $_ENV['home']:
-        $controller = new Controller\ControllerHome(new Model\ModelHome, new View\ViewHome("Accueil"));
+        $controller = new Controller\ControllerHome(new Model\ModelHome, new View\ViewHome("Accueil", '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@2.0.0-beta.1/dist/leaflet.css">
+        <script type="importmap">{"imports": {"leaflet": "https://cdn.jsdelivr.net/npm/leaflet@2.0.0-beta.1/dist/leaflet.js"}}</script>
+        <script type="module" src="/js/map.js"></script>'));
         $controller->render();
         break;
     case $_ENV['mentionsLegales']:
@@ -67,13 +69,13 @@ switch ($path) {
         $controller->render();
         break;
 
-/* Shop */
+    /* Shop */
     case $_ENV['shop']:
         $controller = new Controller\Controller(new Model\Model, new View\ViewShop("Boutique"));
         $controller->render();
         break;
 
-/* User */
+    /* User */
     case $_ENV['signin']:
         if (isset($_SESSION['id_user'])) {
             header('location:' . $_ENV['account']);
@@ -104,7 +106,7 @@ switch ($path) {
         $controller = new Controller\Controller(new Model\Model, new View\ViewAccount("Espace personnel"));
         $controller->render();
         break;
-/* Admin */
+    /* Admin */
     case $_ENV['admin']:
         if (!isset($_SESSION['role']) && $_SESSION['role'] != "Admin") {
             header('location:' . $_ENV['signin']);
@@ -114,7 +116,7 @@ switch ($path) {
         $controller->render();
         break;
 
-/* 404 */
+    /* 404 */
     default:
         $controller = new Controller\Controller(new Model\Model, new View\View404("Erreur 404"));
         $controller->render();

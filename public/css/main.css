@@ -91,15 +91,21 @@ h6 {
     margin: 10px 0;
 }
 
-p {
+p, #map p {
     margin: 10px 0;
 }
 
-a {
+a, #map a {
     color: var(--pink);
     font-weight: 500;
     text-decoration: none;
 }
+
+.justify {
+    text-align: justify;
+}
+
+/* TABLES */
 
 table {
     border-collapse: collapse;
@@ -113,8 +119,20 @@ th, td {
     text-align: left;
 }
 
-.justify {
-    text-align: justify;
+/* BUTTONS */
+
+.btn {
+    margin: auto;
+    width: fit-content;
+    display: block;
+    padding: 5px 10px;
+    background: var(--pink);
+    color: inherit;
+    border: var(--pink) 2px solid;
+    border-radius: 20px;
+    &:hover {
+        background: inherit;
+    }
 }
 
 /* RESPONSIVE */
