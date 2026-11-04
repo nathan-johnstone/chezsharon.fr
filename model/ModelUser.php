@@ -90,7 +90,6 @@ class ModelUser extends Model
             $req->execute();
 
             return $req->fetch(PDO::FETCH_ASSOC);
-
         } catch (EXCEPTION $error) {
             die($error->getMessage());
         }

@@ -64,9 +64,10 @@ class ControllerUser extends Controller
                 empty($_POST['address']) ||
                 empty($_POST['post_code']) ||
                 empty($_POST['city']) ||
-                empty($_POST['email']) || 
-                empty($_POST['password']) || 
-                empty($_POST['confirm_password'])) {
+                empty($_POST['email']) ||
+                empty($_POST['password']) ||
+                empty($_POST['confirm_password'])
+            ) {
                 $this->getView()->setMessage('Veuillez remplir tous les champs.');
                 return;
             }
@@ -98,16 +99,17 @@ class ControllerUser extends Controller
 
             $this->getModel()->addUser();
 
-            $this->getView()->setMessage("Vous avez bien été enregistré.");
-        }
-    }
+            $data = $this->getModel()->findByEmail();
 
-    public function render()
-    {
-        if (isset($_SESSION) && !empty($_SESSION['id_user'])) {
-            header('location:' . $_ENV['account']);
-            exit;
+            $_SESSION['id_user'] = $data['id_user'];
+            $_SESSION['first_name'] = $data['first_name'];
+            $_SESSION['last_name'] = $data['last_name'];
+            $_SESSION['address'] = $data['address'];
+            $_SESSION['post_code'] = $data['post_code'];
+            $_SESSION['city'] = $data['city'];
+            $_SESSION['email'] = $data['email'];
+            $_SESSION['role'] = $data['role'];
+            $_SESSION['createdAt'] = $data['created_at'];
         }
-        $this->getView()->displayAll();
     }
 }

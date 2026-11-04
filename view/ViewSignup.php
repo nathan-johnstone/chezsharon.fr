@@ -27,22 +27,22 @@ class ViewSignup extends View
             <form action="" method="post">
 
                 <label for="first_name">Prénom :</label>
-                <input type="text" name="first_name" id="first_name" required>
+                <input type="text" name="first_name" id="first_name" value="<?= $_POST['first_name'] ?>" required>
 
                 <label for="last_name">Nom :</label>
-                <input type="text" name="last_name" id="last_name" required>
+                <input type="text" name="last_name" id="last_name" value="<?= $_POST['last_name'] ?>" required>
 
                 <label for="address">Adresse :</label>
-                <input type="text" name="address" id="address" required>
+                <input type="text" name="address" id="address" value="<?= $_POST['address'] ?>" required>
 
                 <label for="post_code">Code postal :</label>
-                <input type="text" name="post_code" id="post_code" required>
+                <input type="text" name="post_code" id="post_code" value="<?= $_POST['post_code'] ?>" required>
 
                 <label for="city">Ville :</label>
-                <input type="text" name="city" id="city" required>
+                <input type="text" name="city" id="city" value="<?= $_POST['city'] ?>" required>
 
                 <label for="email">Email :</label>
-                <input type="email" name="email" id="email" required>
+                <input type="email" name="email" id="email" value="<?= $_POST['email'] ?>" required>
 
                 <label for="password">Mot de passe :</label>
                 <input type="password" name="password" id="password" required>
