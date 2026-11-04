@@ -47,7 +47,7 @@ $path = isset($url['path']) ? $url['path'] : '/';
 switch ($path) {
 /* Home */
     case $_ENV['home']:
-        $controller = new Controller\Controller(new Model\Model, new View\ViewHome("Accueil"));
+        $controller = new Controller\ControllerHome(new Model\ModelHome, new View\ViewHome("Accueil"));
         $controller->render();
         break;
     case $_ENV['mentionsLegales']:

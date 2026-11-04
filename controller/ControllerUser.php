@@ -64,9 +64,10 @@ class ControllerUser extends Controller
                 empty($_POST['address']) ||
                 empty($_POST['post_code']) ||
                 empty($_POST['city']) ||
-                empty($_POST['email']) || 
-                empty($_POST['password']) || 
-                empty($_POST['confirm_password'])) {
+                empty($_POST['email']) ||
+                empty($_POST['password']) ||
+                empty($_POST['confirm_password'])
+            ) {
                 $this->getView()->setMessage('Veuillez remplir tous les champs.');
                 return;
             }
@@ -109,16 +110,6 @@ class ControllerUser extends Controller
             $_SESSION['email'] = $data['email'];
             $_SESSION['role'] = $data['role'];
             $_SESSION['createdAt'] = $data['created_at'];
-
         }
-    }
-
-    public function render()
-    {
-        if (isset($_SESSION) && !empty($_SESSION['id_user'])) {
-            header('location:' . $_ENV['account']);
-            exit;
-        }
-        $this->getView()->displayAll();
     }
 }

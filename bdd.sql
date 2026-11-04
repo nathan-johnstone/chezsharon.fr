@@ -60,7 +60,7 @@ CREATE TABLE opening_hours(
    pm_is_closed BOOL NOT NULL DEFAULT true
 )ENGINE=innoDB;
 
-INSERT INTO opening_hours(`day`) VALUES ('Monday'),('Tuesday'),('Wedensday'),('Thursday'),('Friday'),('Saturday'),('Sunday');
+INSERT INTO opening_hours(`day`) VALUES ('Lundi'),('Mardi'),('Mercredi'),('Jeudi'),('Vendredi'),('Samedi'),('Dimanche');
 
 CREATE TABLE IF NOT EXISTS wishlist(
 id_user INT,
